@@ -62,7 +62,7 @@ fun PuppyDetail(
             )
             Row() {
                 Text(text = puppy.name)
-                Text(modifier = Modifier.padding(start = 10.dp),text = puppy.age)
+                Text(modifier = Modifier.padding(start = 10.dp), text = puppy.age)
             }
             Text(text = puppy.description)
         }

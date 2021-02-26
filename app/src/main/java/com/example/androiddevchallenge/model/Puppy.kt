@@ -24,6 +24,7 @@ data class Puppy(
     val description: String,
     val painterRes: Int
 )
+
 const val description = "thanks pexels.com for open-source puppy pictures"
 
 val sample1 = Puppy(1, "Lucas", "Age : 3 months old", description, R.drawable.puppy_res_1)
