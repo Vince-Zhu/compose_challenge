@@ -33,4 +33,3 @@ val sample3 = Puppy(3, "Josh", "Age : 6 months old", description, R.drawable.pup
 val sample4 = Puppy(4, "Helena", "Age : 4 months old", description, R.drawable.puppy_res_4)
 
 val puppies = listOf(sample1, sample2, sample3, sample4)
-

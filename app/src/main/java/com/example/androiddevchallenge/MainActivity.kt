@@ -58,16 +58,20 @@ fun Navigation() {
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination = "main") {
         composable("main") {
-            PuppyList(puppies = puppies, onClick = {
-                navController.navigate("detail/${it}")
-            })
+            PuppyList(
+                puppies = puppies,
+                onClick = {
+                    navController.navigate("detail/$it")
+                }
+            )
         }
         composable(
             "detail/{id}",
             arguments = listOf(navArgument("id") { type = NavType.IntType })
         ) {
             it.arguments?.getInt("id")?.let { puppyId ->
-                PuppyDetail(puppy = puppies.first { puppy -> puppy.id == puppyId }
+                PuppyDetail(
+                    puppy = puppies.first { puppy -> puppy.id == puppyId }
                 ) { navController.popBackStack() }
             }
         }

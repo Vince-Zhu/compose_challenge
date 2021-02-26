@@ -42,11 +42,13 @@ fun PuppyList(
     puppies: List<Puppy>,
     onClick: (Int) -> Unit
 ) {
-    Scaffold(topBar = {
-        TopAppBar(
-            title = { Text(text = "Puppy Adoption") },
-        )
-    }) {
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text(text = "Puppy Adoption") },
+            )
+        }
+    ) {
         LazyColumn {
             items(puppies, { puppy -> puppy.id }) { puppy ->
                 PuppyItem(puppy = puppy, onClick = onClick)
@@ -65,9 +67,11 @@ fun PuppyItem(
             .padding(5.dp),
         elevation = 5.dp
     ) {
-        Row(modifier = Modifier
-            .clickable { onClick(puppy.id) }
-            .fillMaxWidth()) {
+        Row(
+            modifier = Modifier
+                .clickable { onClick(puppy.id) }
+                .fillMaxWidth()
+        ) {
             Image(
                 modifier = Modifier
                     .height(100.dp)
